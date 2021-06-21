@@ -1,4 +1,4 @@
-require_relative 'app/tiros'
+require_relative 'src/tiros'
 puts 'Welcome to the  Bowling game'
 
 tiros ={}
@@ -37,7 +37,7 @@ tiros.each {|key, object|
         tiros[key].suma_puntos(tiros[key-1].total)
     end
     if key == 9
-        break;
+        break
     end
 }
 
@@ -49,16 +49,16 @@ tiros.each {|key, object|
             if tiros[key+1].r1 == 10
                 puts "----------------extras--------------------------"
                 puts "tiro uno: #{tiros[key+1].r1} tiro dos: #{tiros[key+2].r1}"
-                break;
+                break
             elsif tiros[key+1].r1 != 10
                 puts "----------------extras--------------------------"
                 puts "tiro uno: #{tiros[key+1].r1} tiro dos: #{tiros[key+1].r2}"
-                break;
+                break
             end
         elsif tiros[key].total == 10
             puts "----------------extras--------------------------"
             puts "tiro uno: #{tiros[key+1].r1}"
-            break;
+            break
         end
     end
 }
